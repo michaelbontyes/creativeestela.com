@@ -1,0 +1,70 @@
+h+*, h1, h2, h3, h4, a, p{
+  font-family: 'Muli', sans-serif;
+  font-weight: 300
+}
+
+.uk-navbar-nav>li>a{
+  font-weight: 600;
+  color: #333;
+}
+
+.uk-navbar-nav>li.uk-active>a {
+    text-decoration: underline;
+}
+
+.uk-navbar-nav>li>a:hover {
+    text-decoration: underline;
+}
+
+.uk-card-primary {
+  background-color: red;
+}
+
+.uk-navbar {
+    padding: 10px 0 10px 0;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent) {
+    background: #fff;
+}
+
+.hr-container {
+  margin-left: 30px;
+  margin-right: 30px;
+  height: 3px;
+  background: #333;
+  margin-top: 0;
+}
+
+.hr-dark {
+  background: #333;
+}
+
+.hr-red {
+  background: red;
+}
+
+*+.uk-hr, *+hr {
+    /* margin-top: 20px; */
+}
+
+body:before, body:after {
+    content: "";
+    position: fixed;
+    background: #333;
+    left: 0;
+    right: 0;
+    height: 8px;
+    z-index: 1000;
+}
+body:before {
+    top: 0;
+}
+body:after {
+    bottom: 0;
+}
+body {
+    border-left: 8px solid #333;
+    border-right: 8px solid #333;
+    z-index: 1000;
+}

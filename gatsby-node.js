@@ -1,7 +1,11 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
 
-// You can delete this file if you're not using it
+exports.modifyWebpackConfig = ({ config, _stage }) => {
+  return config.merge({
+    resolve: {
+      alias: {
+        blocks: path.resolve(config._config.context, 'src/components/blocks')
+      },
+    },
+  });
+};
