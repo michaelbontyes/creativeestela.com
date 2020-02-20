@@ -5,7 +5,7 @@
   </a>
 </p>
 <h1 align="center">
-  creativeestela.com personal website and portfolio
+  creativeestela.com
 </h1>
 <h3 align="center">
   Personal website and portfolio
