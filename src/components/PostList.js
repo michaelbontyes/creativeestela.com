@@ -21,9 +21,9 @@ export default class IndexPage extends React.Component {
                     </div>
                     <div className="uk-card-body">
                       <div class="uk-flex uk-flex-middle uk-text-center">
-                        <div class="uk-card uk-text-left">
+                        <div class="uk-card uk-text-left uk-width-expand@m">
 
-                          
+
                             <div
                               className="content"
                               dangerouslySetInnerHTML={{ __html: post.excerpt }}
@@ -36,7 +36,7 @@ export default class IndexPage extends React.Component {
 
 
                         </div>
-                        <div class="uk-card uk-margin-left uk-text-right">
+                        <div class="uk-card uk-margin-left uk-text-right uk-width-auto@m">
                           <a href="#"><p>  > </p></a>
                         </div>
                       </div>
