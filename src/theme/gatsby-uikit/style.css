@@ -3,6 +3,9 @@ h+*, h1, h2, h3, h4, a, p, span{
   font-weight: 300
 }
 
+nav.uk-navbar.uk-container {
+}
+
 .uk-label {
     padding: 2px 10px;
     background: transparent;

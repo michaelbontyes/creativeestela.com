@@ -16,42 +16,29 @@ export const BlogPostTemplate = ({
     <div className="uk-section">
         <div className="uk-container">
           <div className="" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 100">
+          <div class="uk-flex uk-flex-middle uk-text-center">
+            <div class="uk-card uk-text-left uk-width-expand@m">
               <h2 className="">
-                {title}
+              {title}
               </h2>
+            </div>
+            <div class="uk-card uk-margin-left uk-text-right uk-width-auto@m">
+            {tags && tags.length ? (
+              <>
+                  {tags.map(tag => (
+                     <><Link class="uk-label" to={`/tags/${tag.slug}`}>{tag.name}</Link>&nbsp;&nbsp;</>
+                  ))}
+              </>
+            ) : null}
+            </div>
+          </div>
+
               <div class="entry-content"></div>
               <div
                 className="content"
                 dangerouslySetInnerHTML={{ __html: content }}
               />
-              <div style={{ marginTop: `4rem` }}>
-                {categories && categories.length ? (
-                  <div>
-                    <h4>Categories</h4>
-                    <ul className="taglist">
-                      {categories.map(category => (
-                        <li key={`${category.slug}cat`}>
-                          <Link to={`/categories/${category.slug}/`}>
-                            {category.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-                {tags && tags.length ? (
-                  <div>
-                    <h4>Tags</h4>
-                    <ul className="taglist">
-                      {tags.map(tag => (
-                        <li key={`${tag.slug}tag`}>
-                          <Link to={`/tags/${tag.slug}/`}>{tag.name}</Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ) : null}
-              </div>
+
             </div>
           </div>
         </div>
