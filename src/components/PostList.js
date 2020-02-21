@@ -8,7 +8,6 @@ export default class IndexPage extends React.Component {
 
     return (
       <div className="uk-section">
-          <hr className="hr-container hr-red"/>
           <div className="uk-container">
               <h1 className="has-text-weight-bold is-size-2">{title}</h1>
               <div className="uk-child-width-1-3@m uk-grid-small uk-grid-match" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" data-uk-grid>
@@ -26,7 +25,7 @@ export default class IndexPage extends React.Component {
                               dangerouslySetInnerHTML={{ __html: post.excerpt }}
                             />
                             {post.tags && post.tags.length ? (
-                              <div>
+                              <div class="tags">
                                   {post.tags.map(tag => (
                                      <><Link class="uk-label" to={`/tags/${tag.slug}`}>{tag.name}</Link>&nbsp;&nbsp;</>
                                   ))}
@@ -34,7 +33,7 @@ export default class IndexPage extends React.Component {
                             ) : null}
                         </div>
                         <div class="uk-card uk-margin-left uk-text-right uk-width-auto@m">
-                          <a href="#"><p>  > </p></a>
+                          <Link to={post.slug}><i class="fas fa-chevron-right"></i></Link>
                         </div>
                       </div>
                     </div>

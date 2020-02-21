@@ -1,24 +1,21 @@
 import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 
-
-
-
 import Image from "../components/image"
 import SEO from "../components/seo"
 
 
-
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
+import NavBar from '../components/Navbar'
 
-import Grid from "../components/grid"
 import Hero from "../components/hero"
 
 class Homepage extends Component {
   render() {
     const data = this.props.data
     const { edges: posts, totalCount } = data.allWordpressPost
+    const { edges: pages } = data.allWordpressPage
     const { title: siteTitle } = data.site.siteMetadata
     const title = `${totalCount} post${
       totalCount === 1 ? '' : 's'
@@ -26,7 +23,7 @@ class Homepage extends Component {
     return (
     <>
 
-        <Layout>
+        <Layout pages={pages}>
           <SEO title="Home" />
           <div className="uk-section">
               <div className="uk-container">
@@ -61,9 +58,8 @@ export const pageQuery = graphql`
         title
       }
     }
-    allWordpressPost(
-      filter: { categories: { elemMatch: { slug: { eq: "portfolio" } } } }
-    ) {
+    allWordpressPost(filter: {categories: {elemMatch: {slug: {eq: "portfolio"}}}}, sort: {fields: date, order: DESC})
+    {
       totalCount
       edges {
         node {

@@ -9,7 +9,6 @@ import Thumbnail3 from "../images/thumbnail3.png"
 const GridCopy = () => (
 
 <div className="uk-section">
-    <hr className="hr-container hr-red"/>
     <div className="uk-container">
 
         <div className="uk-child-width-1-3@m uk-grid-small uk-grid-match" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" data-uk-grid>

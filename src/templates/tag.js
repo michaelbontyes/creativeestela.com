@@ -3,15 +3,17 @@ import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
+import { Link } from "gatsby"
+import { Button} from 'react-bootstrap'
 
 const Tag = props => {
   const { data, pageContext } = props
   const { edges: posts, totalCount } = data.allWordpressPost
   const { title: siteTitle } = data.site.siteMetadata
   const { name: tag } = pageContext
-  const title = `${totalCount} post${
+  const title = `${tag} work (${totalCount} project${
     totalCount === 1 ? '' : 's'
-  } with the tag ${tag}`
+  })`
 
   return (
     <Layout>
