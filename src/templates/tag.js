@@ -4,7 +4,6 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PostList from '../components/PostList'
 import { Link } from "gatsby"
-import { Button} from 'react-bootstrap'
 
 const Tag = props => {
   const { data, pageContext } = props

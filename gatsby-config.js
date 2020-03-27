@@ -2,9 +2,10 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Uikit`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Creativestela`,
+    description: `Montreal UX Designer`,
+    author: `@michaelbontyes`,
+    siteURL: `https://creativestela.com`,
   },
   plugins: [
     {
@@ -131,7 +132,38 @@ module.exports = {
         ],
         display: 'swap'
       }
-    }
+    },
+    {
+    resolve: `gatsby-plugin-scroll-reveal`,
+      options: {
+          threshold: 1, // Percentage of an element's area that needs to be visible to launch animation
+          once: true, // Defines if animation needs to be launched once
+          disable: false, // Flag for disabling animations
+
+          // Advanced Options
+          selector: '[data-sal]', // Selector of the elements to be animated
+          animateClassName: 'sal-animate', // Class name which triggers animation
+          disabledClassName: 'sal-disabled', // Class name which defines the disabled state
+          rootMargin: '0% 50%', // Corresponds to root's bounding box margin
+          enterEventName: 'sal:in', // Enter event name
+          exitEventName: 'sal:out', // Exit event name
+      }
+    },
+    {
+    resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-TF8CSQM",
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
