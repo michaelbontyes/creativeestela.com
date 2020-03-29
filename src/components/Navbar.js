@@ -29,7 +29,7 @@ const Navbar = () => (
                 </a>
               </div>
               <div className="uk-navbar-right">
-                <ul className="uk-navbar-nav">
+                <ul className="uk-navbar-nav uk-visible@m">
                 <li><Link
                   className="navbar-item"
                   to="/work"
@@ -51,12 +51,13 @@ const Navbar = () => (
                   </li>
                 ))}
                 <li>
-                  <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+                  <a href="#"><i className="fab fa-instagram fa-lg"></i></a>
                 </li>
                 <li>
-                  <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
+                  <a href="#"><i className="fab fa-linkedin fa-lg"></i></a>
                 </li>
                 </ul>
+                <a href="#" className="uk-navbar-toggle uk-hidden@m" data-uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
               </div>
             </nav>
             <hr className="hr-container hr-dark"/>

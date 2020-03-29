@@ -12,6 +12,10 @@ const Footer = () => (
           <li>
             <a href="/"><img src={Logo} width="auto" height="8px"  alt="logo"/></a>
           </li>
+        </ul>
+      </nav>
+      <nav className="uk-navbar uk-container" data-uk-navbar>
+        <ul className="uk-navbar-nav uk-navbar-center footer-social-nav">
           <li>
             <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
           </li>

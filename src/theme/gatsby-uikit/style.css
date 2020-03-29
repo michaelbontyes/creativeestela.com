@@ -3,7 +3,24 @@ h+*, h1, h2, h3, h4, a, p, span{
   font-weight: 300
 }
 
-nav.uk-navbar.uk-container {
+@media screen and (max-width: 1300px){
+  nav.uk-navbar.uk-container {
+      padding: 0 40px 0 40px;
+  }
+}
+
+@media screen and (max-width: 1300px){
+  .uk-section {
+      padding: 0 15px 0 15px;
+  }
+}
+
+.uk-navbar-nav>li>a{
+  min-height: 10px;
+}
+
+.footer-social-nav{
+margin-bottom: 30px !important;;
 }
 
 .tags [aria-current]:not([aria-current="false"]) {
