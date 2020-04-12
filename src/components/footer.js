@@ -1,12 +1,17 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import {
+  FacebookIcon,
+  LinkedinIcon,
+  TwitterIcon
+} from "react-share";
 
 import Logo from "../images/logo.png"
 
 const Footer = () => (
 <div className="uk-section uk-section-small">
-  <hr className="hr-container hr-dark"/>
+  <hr className="hr-container hr-container-bottom hr-dark"/>
     <nav className="uk-navbar uk-container" data-uk-navbar>
         <ul className="uk-navbar-nav uk-navbar-center">
           <li>

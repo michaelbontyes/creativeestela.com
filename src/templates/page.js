@@ -17,7 +17,7 @@ class Page extends Component {
               <div className="" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 100">
               <div class="uk-flex uk-flex-middle uk-text-center">
                 <div class="uk-card uk-text-left uk-width-expand@m">
-                  <h2 className="">
+                  <h2 className="page-title">
                   {StaticPage.title}
                   </h2>
                 </div>

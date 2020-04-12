@@ -28,7 +28,7 @@ class Homepage extends Component {
           <div className="uk-section">
               <div className="uk-container">
                 <div className="uk-flex uk-flex-center" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 100">
-                  <div className="uk-width-2-3@s">
+                  <div className="uk-width-2-3@s uk-margin-top uk-margin-bottom">
                     <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h4>
                   </div>
                 </div>
@@ -41,9 +41,6 @@ class Homepage extends Component {
 
         </Layout>
 
-
-
-        ))}
       </>
     )
   }

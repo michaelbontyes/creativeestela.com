@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -9,16 +10,16 @@ export default class IndexPage extends React.Component {
     return (
       <div className="uk-section">
           <div className="uk-container">
-              <h1 className="has-text-weight-bold is-size-2">{title}</h1>
+              <h2 className="has-text-weight-bold is-size-2 page-title">{title}</h2>
               <div className="uk-child-width-1-3@m uk-grid-small uk-grid-match" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" data-uk-grid>
               {posts.map(({ node: post }) => (
                 <div>
-                  <div className="uk-card uk-card-default" key={post.id}>
+                  <div className="uk-card" key={post.id}>
                     <div className="uk-card-media-top">
                         <Link to={post.slug}><img src={post.jetpack_featured_media_url} alt="" className="uk-animation-reverse uk-transform-origin-top-right"/></Link>
                     </div>
-                    <div className="uk-card-body">
-                      <div class="uk-flex uk-flex-middle uk-text-center">
+                    <div className="uk-card-body uk-margin-top uk-padding-remove">
+                      <div class="uk-flex uk-flex-top uk-text-center">
                         <div class="uk-card uk-text-left uk-width-expand@m">
                             <div
                               className="content"
@@ -33,7 +34,11 @@ export default class IndexPage extends React.Component {
                             ) : null}
                         </div>
                         <div class="uk-card uk-margin-left uk-text-right uk-width-auto@m">
-                          <Link to={post.slug}><i class="fas fa-chevron-right"></i></Link>
+                            <Link to={post.slug}>
+                              <div className="link-chevron">
+                                <FontAwesomeIcon icon="chevron-right" size="2x" />
+                              </div>
+                            </Link>
                         </div>
                       </div>
                     </div>
