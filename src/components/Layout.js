@@ -24,7 +24,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      {children}
+        <div data-uk-height-viewport="expand: true">
+          {children}
+        </div>
       <Footer/>
     </>
   )
