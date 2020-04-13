@@ -46,9 +46,6 @@ h+*, h1, h2, h3, h4, a, p, span{
     background: none !important;
 }
 
-img.logo {
-    max-width: 110%;
-}
 
 .uk-container {
     padding-left: 15px;
