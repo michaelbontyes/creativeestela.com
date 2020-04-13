@@ -69,11 +69,15 @@ const Navbar = () => (
                 </nav>
                 <hr className="hr-container hr-dark"/>
             </div>
- <a href="#my-id" data-uk-toggle></a>
+      
 
-            <div id="my-id" data-uk-offcanvas="flip: true" >
-                <div class="uk-offcanvas-bar">
-            <ul className="uk-nav">
+
+         <a href="#my-id" data-uk-toggle></a>
+
+         <div id="my-id" data-uk-offcanvas="flip: true" className="uk-offcanvas">
+             <div class="uk-offcanvas-bar">
+
+              <ul class="uk-navbar-nav uk-nav side-nav">
             <li><Link
               className="navbar-item"
               to="/work"
@@ -104,8 +108,9 @@ const Navbar = () => (
               <a href="https://www.linkedin.com/in/estela-garcia-zamora" target="_blank">LinkedIn</a>
             </li>
             </ul>
-        </div>
-    </div>
+
+       </div>
+   </div>
       </header>
 
     )}

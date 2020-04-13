@@ -4,6 +4,15 @@ h+*, h1, h2, h3, h4, a, p, span{
   color: #333333;
 }
 
+.side-nav {
+    display: inline-block;
+    text-align: left;
+}
+
+.side-nav.uk-navbar-nav>li>a{
+    justify-content: left;
+}
+
 .content a {
     color: #6041DE;
 }
@@ -168,6 +177,11 @@ a .link-chevron:hover{
 
 .uk-offcanvas-bar a.navbar-item {
     font-size: 1.5em;
+    color: #fff !important;
+}
+
+.uk-offcanvas-bar a {
+    color: #fff !important;
 }
 
 .uk-card-primary {
@@ -175,7 +189,7 @@ a .link-chevron:hover{
 }
 
 .uk-navbar {
-    padding: 10px 0 10px 0;
+    padding: 20px 0 10px 0;
 }
 
 .uk-navbar-container:not(.uk-navbar-transparent) {
