@@ -35,7 +35,7 @@ h+*, h1, h2, h3, h4, a, p, span{
 
 .uk-navbar-toggle{
     color: #333333;
-    font-size: 20px;
+    font-size: 2.5em;
 }
 
 .uk-navbar-toggle:hover{
@@ -46,6 +46,9 @@ h+*, h1, h2, h3, h4, a, p, span{
     background: none !important;
 }
 
+.uk-navbar-left.uk-padding.uk-padding-remove-bottom.uk-padding-remove-top {
+    padding-top: 5px !important;
+}
 
 .uk-container {
     padding-left: 15px;
