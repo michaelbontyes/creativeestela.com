@@ -57,6 +57,14 @@ const Navbar = () => (
                         </Link>
                         </li>
                       ))}
+                      <li><Link
+                        className="navbar-item"
+                        to="/contact"
+                        key="/contact"
+                        activeClassName="active"
+                      >
+                        Contact
+                      </Link></li>
                       <li>
                         <a href="https://www.instagram.com/misssatellite/" target="_blank"><i className="fab fa-instagram fa-lg"></i></a>
                       </li>
@@ -69,7 +77,7 @@ const Navbar = () => (
                 </nav>
                 <hr className="hr-container hr-dark"/>
             </div>
-      
+
 
 
          <a href="#my-id" data-uk-toggle></a>
@@ -98,6 +106,14 @@ const Navbar = () => (
               </Link>
               </li>
             ))}
+            <li><Link
+              className="navbar-item"
+              to="/contact"
+              key="/contact"
+              activeClassName="active"
+            >
+              Contact
+            </Link></li>
             <li>
               <hr class="uk-divider-small uk-margin-top"/>
             </li>

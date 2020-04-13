@@ -4,12 +4,7 @@ import { Link, graphql } from "gatsby"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-
 import Layout from '../components/Layout'
-import PostList from '../components/PostList'
-import NavBar from '../components/Navbar'
-
-import Hero from "../components/hero"
 
 class Thanks extends Component {
   render() {
