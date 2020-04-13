@@ -12,8 +12,21 @@ h+*, h1, h2, h3, h4, a, p, span{
     text-decoration: underline;
 }
 
+.uk-navbar-left.uk-padding.uk-padding-remove-top {
+    padding-top: 15px;
+}
+
+.uk-navbar-left.uk-padding.uk-padding-remove-bottom.uk-padding-remove-top {
+    padding-left: 25px;
+}
+
+.uk-navbar-right.uk-padding.uk-padding-remove-bottom.uk-padding-remove-top {
+    padding-right: 25px;
+}
+
 .uk-navbar-toggle{
     color: #333333;
+    font-size: 20px;
 }
 
 .uk-navbar-toggle:hover{

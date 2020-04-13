@@ -27,52 +27,52 @@ const Navbar = () => (
     render={data => (
 
       <header>
-      <div data-uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light, top: 200">
-        <div className="uk-navbar-container">
 
-          <nav className="uk-navbar uk-container" data-uk-navbar>
-            <div className="uk-navbar-left">
-            <a href="/">
-              <img src={logo} className="logo" alt="logo"/>
-            </a>
+            <div className="" data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
+                <nav class="uk-navbar-container" data-uk-navbar>
+                    <div class="uk-navbar-left uk-padding uk-padding-remove-bottom uk-padding-remove-top">
+                        <a href="/">
+                          <img src={logo} className="logo" alt="logo"/>
+                        </a>
+                    </div>
+                    <div class="uk-navbar-right uk-padding uk-padding-remove-bottom uk-padding-remove-top">
+                    <ul className="uk-navbar-nav uk-visible@m">
+                      <li><Link
+                        className="navbar-item"
+                        to="/work"
+                        key="/work"
+                        activeClassName="active"
+                      >
+                        Work
+                      </Link></li>
+                      {data.allWordpressPage.edges.map(edge => (
+                        <li>
+                        <Link
+                          className="navbar-item"
+                          to={edge.node.slug}
+                          key={edge.node.slug}
+                          activeClassName="active"
+                        >
+                          {edge.node.title}
+                        </Link>
+                        </li>
+                      ))}
+                      <li>
+                        <a href="https://www.instagram.com/misssatellite/" target="_blank"><i className="fab fa-instagram fa-lg"></i></a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/estela-garcia-zamora" target="_blank"><i className="fab fa-linkedin fa-lg"></i></a>
+                      </li>
+                      </ul>
+                        <button className="uk-button uk-button-large uk-navbar-toggle uk-hidden@m mobile-icon uk-navbar-nav uk-active mobile-nav-link" data-uk-toggle="target: #my-id" type="button">☰</button>
+                    </div>
+                </nav>
+                <hr className="hr-container hr-dark"/>
             </div>
-            <div className="uk-navbar-right">
-              <ul className="uk-navbar-nav uk-visible@m">
-              <li><Link
-                className="navbar-item"
-                to="/work"
-                key="/work"
-                activeClassName="active"
-              >
-                Work
-              </Link></li>
-              {data.allWordpressPage.edges.map(edge => (
-                <li>
-                <Link
-                  className="navbar-item"
-                  to={edge.node.slug}
-                  key={edge.node.slug}
-                  activeClassName="active"
-                >
-                  {edge.node.title}
-                </Link>
-                </li>
-              ))}
-              <li>
-                <a href="https://www.instagram.com/misssatellite/" target="_blank"><i className="fab fa-instagram fa-lg"></i></a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/in/estela-garcia-zamora" target="_blank"><i className="fab fa-linkedin fa-lg"></i></a>
-              </li>
-              </ul>
-              <a href="#" className="uk-navbar-toggle uk-hidden@m" data-uk-navbar-toggle-icon uk-toggle="target: #sidenav"></a>
-            </div>
-          </nav>
-          <hr className="hr-container hr-dark"/>
-        </div>
-      </div>
-        <div id="sidenav" uk-offcanvas="flip: true" className="uk-offcanvas">
-        <div className="uk-offcanvas-bar">
+ <a href="#my-id" data-uk-toggle></a>
+
+            <div id="my-id" data-uk-offcanvas="flip: true" >
+                <div class="uk-offcanvas-bar">
             <ul className="uk-nav">
             <li><Link
               className="navbar-item"
