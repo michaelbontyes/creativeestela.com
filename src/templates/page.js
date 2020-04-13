@@ -12,7 +12,7 @@ class Page extends Component {
       <>
       <Layout>
         <Helmet title={`${StaticPage.title} | Blog`} />
-        <div className="uk-section">
+        <div className="uk-section uk-padding-top-remove">
             <div className="uk-container">
               <div className="" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 100">
               <div class="uk-flex uk-flex-middle uk-text-center">

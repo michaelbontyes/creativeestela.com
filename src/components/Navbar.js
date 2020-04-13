@@ -59,7 +59,7 @@ const Navbar = () => (
                 </li>
               ))}
               <li>
-                <a href="#" target="_blank"><i className="fab fa-instagram fa-lg"></i></a>
+                <a href="https://www.instagram.com/misssatellite/" target="_blank"><i className="fab fa-instagram fa-lg"></i></a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/estela-garcia-zamora" target="_blank"><i className="fab fa-linkedin fa-lg"></i></a>
@@ -95,10 +95,13 @@ const Navbar = () => (
               </li>
             ))}
             <li>
-              <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+              <hr class="uk-divider-small uk-margin-top"/>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/estela-garcia-zamora" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+              <a href="https://www.instagram.com/misssatellite/" target="_blank">Instagram</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/estela-garcia-zamora" target="_blank">LinkedIn</a>
             </li>
             </ul>
         </div>

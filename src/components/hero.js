@@ -5,7 +5,7 @@ import React from "react"
 import HeroImg from "../images/hero.png"
 
 const Hero = () => (
-<div className="uk-card uk-card-default uk-card-body uk-cover-container uk-height-medium">
+<div className="uk-card uk-card-default uk-card-body uk-cover-container uk-height-medium uk-width-margin">
   <img src={HeroImg} alt="thumbnail1" data-uk-cover/>
 </div>
 )
