@@ -7,7 +7,7 @@ const Navbar = () => (
   <StaticQuery
     query={graphql`
       query {
-        allWordpressPage(sort: {fields: date, order: DESC}) {
+        allWordpressPage(sort: {fields: date, order: DESC}, filter: {slug: {ne: "homepage"}}) {
           edges {
             node {
               title

@@ -36,7 +36,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allWordpressPost(filter: {categories: {elemMatch: {slug: {eq: "portfolio"}}}}, sort: {fields: date, order: DESC})
+    allWordpressPost(filter: {slug: {ne: "homepage"}, categories: {elemMatch: {slug: {eq: "portfolio"}}}}, sort: {fields: date, order: DESC})
     {
       totalCount
       edges {

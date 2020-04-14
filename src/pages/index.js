@@ -17,6 +17,8 @@ class Homepage extends Component {
     const { edges: posts, totalCount } = data.allWordpressPost
     const { edges: pages } = data.allWordpressPage
     const { title: siteTitle } = data.site.siteMetadata
+    const excerpt = data.wordpressPost.excerpt
+    const featuredImage = data.wordpressPost.jetpack_featured_media_url
     const title = `${totalCount} post${
       totalCount === 1 ? '' : 's'
     } `
@@ -29,13 +31,18 @@ class Homepage extends Component {
               <div className="uk-container">
                 <div className="uk-flex uk-flex-center" data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 100">
                   <div className="uk-width-2-3@s uk-margin-top uk-margin-bottom">
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </h4>
+                    <h4
+                      className="content"
+                      dangerouslySetInnerHTML={{ __html: excerpt }}
+                    ></h4>
                   </div>
                 </div>
               </div>
           </div>
           <div data-uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 200" >
-          <Hero/>
+            <div className="uk-card uk-card-body uk-cover-container uk-height-medium uk-width-margin">
+              <img src={featuredImage} alt="thumbnail1" data-uk-cover/>
+            </div>
           </div>
           <PostList posts={posts} title="" />
 
@@ -55,7 +62,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allWordpressPost(filter: {categories: {elemMatch: {slug: {eq: "portfolio"}}}}, sort: {fields: date, order: DESC})
+    allWordpressPost(filter: {slug: {ne: "homepage"}, categories: {elemMatch: {slug: {eq: "portfolio"}}}}, sort: {fields: date, order: DESC})
     {
       totalCount
       edges {
@@ -63,6 +70,11 @@ export const pageQuery = graphql`
           ...PostListFields
         }
       }
+    }
+    wordpressPost(slug: {eq: "homepage"}) {
+      title
+      excerpt
+      jetpack_featured_media_url
     }
     allWordpressPage {
       edges {

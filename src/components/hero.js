@@ -4,7 +4,7 @@ import React from "react"
 
 import HeroImg from "../images/hero.png"
 
-const Hero = () => (
+const Hero = ({ featuredImage }) => (
 <div className="uk-card uk-card-body uk-cover-container uk-height-medium uk-width-margin">
   <img src={HeroImg} alt="thumbnail1" data-uk-cover/>
 </div>
