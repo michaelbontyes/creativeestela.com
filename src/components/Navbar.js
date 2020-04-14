@@ -30,12 +30,12 @@ const Navbar = () => (
 
             <div className="" data-uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
                 <nav class="uk-navbar-container" data-uk-navbar>
-                    <div class="uk-navbar-left uk-padding uk-padding-remove-bottom uk-padding-remove-top">
+                    <div class="uk-navbar-left uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-padding-remove-right">
                         <a href="/">
                           <img src={logo} className="logo" alt="logo"/>
                         </a>
                     </div>
-                    <div class="uk-navbar-right uk-padding uk-padding-remove-bottom uk-padding-remove-top">
+                    <div class="uk-navbar-right uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-padding-remove uk-padding-remove-left">
                     <ul className="uk-navbar-nav uk-visible@m">
                       <li><Link
                         className="navbar-item"
@@ -72,7 +72,7 @@ const Navbar = () => (
                         <a href="https://www.linkedin.com/in/estela-garcia-zamora" target="_blank"><i className="fab fa-linkedin fa-lg"></i></a>
                       </li>
                       </ul>
-                        <button className="uk-button uk-button-large uk-navbar-toggle uk-hidden@m mobile-icon uk-navbar-nav uk-active mobile-nav-link" data-uk-toggle="target: #my-id" type="button">☰</button>
+                        <button className="uk-button uk-navbar-toggle uk-hidden@m mobile-icon uk-navbar-nav uk-active mobile-nav-link" data-uk-toggle="target: #my-id" type="button">☰</button>
                     </div>
                 </nav>
                 <hr className="hr-container hr-dark"/>
