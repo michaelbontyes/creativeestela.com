@@ -35,7 +35,7 @@ const Navbar = () => (
                           <img src={logo} className="logo" alt="logo"/>
                         </a>
                     </div>
-                    <div class="uk-navbar-right uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-padding-remove uk-padding-remove-left">
+                    <div class="uk-navbar-right uk-padding uk-padding-remove-bottom uk-padding-remove-top uk-padding-remove-left">
                     <ul className="uk-navbar-nav uk-visible@m">
                       <li><Link
                         className="navbar-item"
